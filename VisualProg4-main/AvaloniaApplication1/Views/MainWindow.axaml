@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        Width="450"
+        Height="450"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaApplication1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="AvaloniaApplication1.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaApplication1">
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  <Grid>
+    <!--ShowGridLines="True"-->
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <TextBox Text="{Binding Greeting}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Focusable="False" IsUndoEnabled="False" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="66"></TextBox>
+
+    <Button Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="I">I</Button>
+    <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="L">L</Button>
+    <Button Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="M">M</Button>
+    <Button Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Op}" CommandParameter="2">*</Button>
+    <Button Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="V">V</Button>
+    <Button Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="C">C</Button>
+    <Button Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Op}" CommandParameter="0">+</Button>
+    <Button Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Op}" CommandParameter="3">/</Button>
+    <Button Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="X">X</Button>
+    <Button Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Str}" CommandParameter="D">D</Button>
+    <Button Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Op}" CommandParameter="1">-</Button>
+    <Button Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Command="{Binding OnClickCommand_Eq}">=</Button>
+  </Grid>
+
+
+</Window>
